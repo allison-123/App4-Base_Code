@@ -23,9 +23,154 @@ Known Issues:
 blah, blah, blah, blah
 -->
 
-   <head> 
-      
-	   PUT YOUR OLD CODE IN HERE
+   <head>
+      <title>Hello World!!</title>  
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <link rel="stylesheet" href="w3.css">
+      <link rel="stylesheet" href="w3-colors-flat.css">
+   </head> 
+
+
+<script>
+        var allergy_count = 0; //variables for LIBERAL
+        var cold_count = 0; //variables for CONSERVATE
+
+
+        function allergyAdd(){
+            allergy_count = allergy_count + 1;
+		alert(allergy_count);
+
+        }
+
+        function coldAdd(){
+            cold_count = cold_count + 1;
+		alert(cold_count);
+        }
+	function getResults() //make sure these are word for word with the final results page
+	{ 
+	var allergyPercent= allergy_count/4*100 // calculations fotr the allergy percentages
+	var coldPercent = cold_count/4*100 // calculations fot the cold percentages
+	var resultText = document.getElementById("results"); // will go get data from the whole app/document for the resultText 
+	 	resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; // full calculation for final results of app
+
+	    }
+  </script>
+
+
+
+<style>	
+.body {
+     margin: 0em;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+}
+</style>
+
+<body>
+<div id="header" class="w3-container w3-flat-carrot">
+	<h1>Cold or Allergies?</h1>
+</div>
+	
+<div id="content" class="w3-container">
+	<p>Are you wondering how conservative or liberal you are? Answer a few short questions to find out!</p>
+	
+	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
+	
+	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+ 	
+	<p>THIS CODE SHOULD ONLY BE USED TO HELP EVALUATE YOUR PERSONAL POSITIONS, NOT DECLARE YOUR PARTISAN STATUS.</p>
+
+<div class="page" id="one">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 1</h1>  <!-- title for this pages header -->
+	</div>
+	
+    	<div id="content" class="w3-container">
+        <p>Are you Pro-Life or Pro-Choice?</p>    <!-- Question 1 allergy yes cold no --> 
+</div>
+    		<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black"> Pro-Choice </a> <!-- allergy goes with yes. onclicks work -->
+		<a href="#two" onclick="coldAdd();" class="w3-btn w3-black"> Pro-Life </a> <!-- cold goes with no. onclicks work -->
+</div>
+
+<div class="page" id="two"> <!-- created page two successfully -->
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 2</h1>  <!-- title for this pages header -->
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Should the US continue the death penalty?</p> <!-- Question 2 allergy no cold yes --> 
+	</div>
+		<a href="#three" onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>  <!-- cold yes. onclicks work -->
+		<a href="#three" onclick="allergyAdd();" class="w3-btn w3-black"> No </a>  <!-- allergy no. onclicks work --> 
+	</div>	
+<div class="page" id="three"> <!-- created page three successfully -->
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 3</h1>  <!-- title for this pages header -->
+	</div>
+	
+    	<div id="content" class="w3-container">
+        <p>Are you more Pro-Gun Control or Pro-Gun Rights?</p>  <!-- question 3 cold yes allergy no-->
+	</div>
+		<a href="#four" onclick="coldAdd();" class="w3-btn w3-black"> Gun Rights </a> <!-- cold yes. onclicks work -->
+		<a href="#four" onclick="allergyAdd();" class="w3-btn w3-black"> Gun Control </a> <!-- allergy no. onclicks work -->
+	</div>	
+<div class="page" id="four"> <!-- created page four successfully -->
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 4</h1> <!-- title for this pages header -->
+	</div>
+	
+    	<div id="content" class="w3-container">
+        <p>Should recreational marijuana be legal?</p>   <!-- question 4 allergy yes cold no -->  
+	</div>
+		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>  <!-- allergy yes. onclicks work -->
+		<a href="#five" onclick="coldAdd();" class="w3-btn w3-black"> No </a> <!-- cold no. onclicks work -->
+	</div>	
+<div class="page" id="five"> <!-- created page three successfully -->
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 5</h1>  <!-- title for this pages header -->
+	</div>
+	
+    	<div id="content" class="w3-container">
+        <p>Are q5q5q5?</p>  <!-- question 3 cold yes allergy no-->
+	</div>
+		<a href="#six" onclick="coldAdd();" class="w3-btn w3-black"> Gun Rights </a> <!-- cold yes. onclicks work -->
+		<a href="#six" onclick="allergyAdd();" class="w3-btn w3-black"> Gun Control </a> <!-- allergy no. onclicks work -->
+	</div>	
+<div class="page" id="six"> <!-- created page three successfully -->
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question6</h1>  <!-- title for this pages header -->
+	</div>
+	
+    	<div id="content" class="w3-container">
+        <p>Are q6q6q6?</p>  <!-- question 3 cold yes allergy no-->
+	</div>
+		<a href="#results" onclick="coldAdd();" class="w3-btn w3-black"> Gun Rights </a> <!-- cold yes. onclicks work -->
+		<a href="#results" onclick="allergyAdd();" class="w3-btn w3-black"> Gun Control </a> <!-- allergy no. onclicks work -->
+	</div>
+<div class="page" id="results"> <!-- created results page successfully -->
+	<div class="w3-container w3-flat-carrot">
+		<h1>Results!</h1> <!-- results header -->
+		<a onclick="getResults();" class="w3-btn w3-black"> Get Results Here! </a> <!-- results button made - added getResults()-->
+		<p id="results"></p> <!-- page ID successful -->
+
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>Cold or Allergies?</p>
+</footer>
 	   
    </body>
 </html>
