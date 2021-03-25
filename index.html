@@ -34,7 +34,7 @@ blah, blah, blah, blah
 
 <script>
         var allergy_count = 0; //variables for LIBERAL
-        var cold_count = 0; //variables for CONSERVATE
+        var cold_count = 0; //variables for CONSERVATIVE
 
 
         function allergyAdd(){
@@ -49,8 +49,8 @@ blah, blah, blah, blah
         }
 	function getResults() //make sure these are word for word with the final results page
 	{ 
-	var allergyPercent= allergy_count/4*100 // calculations fotr the allergy percentages
-	var coldPercent = cold_count/4*100 // calculations fot the cold percentages
+	var allergyPercent= allergy_count/6*100 // calculations fotr the allergy percentages
+	var coldPercent = cold_count/6*100 // calculations fot the cold percentages
 	var resultText = document.getElementById("results"); // will go get data from the whole app/document for the resultText 
 	 	resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; // full calculation for final results of app
 
@@ -169,7 +169,7 @@ blah, blah, blah, blah
 		<p id="results"></p> <!-- page ID successful -->
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
-	<p>Cold or Allergies?</p>
+	<p>Conservative or Liberal?</p>
 </footer>
 	   
    </body>
